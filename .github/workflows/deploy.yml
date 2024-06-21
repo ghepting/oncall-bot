@@ -7,6 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: production
     timeout-minutes: 5
 
     steps:
@@ -33,12 +34,9 @@ jobs:
         run: |
           curl -fsSL https://downloads.slack-edge.com/slack-cli/install.sh | bash
 
-  deploy:
-    depends-on: build
-    steps:
       - name: Deploy the app
         env:
           SLACK_SERVICE_TOKEN: ${{ secrets.SLACK_SERVICE_TOKEN }}
+          SLACK_TEAM_ID: ${{ vars.SLACK_TEAM_ID }}
         run: |
-          cd oncall-bot/
-          slack deploy -s --token $SLACK_SERVICE_TOKEN
+          slack deploy -s --team $SLACK_TEAM_ID --token $SLACK_SERVICE_TOKEN
