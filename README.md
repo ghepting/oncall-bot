@@ -1,6 +1,10 @@
 # @oncall bot
 
-Oncall bot responds to @oncall app mentions and tags whatever engineer is the current primary oncall in a thread. This helps route important/urgent messages to the right engineer without people having to refer to PagerDuty or any other sources to figure out who's currently oncall. This is especially helpful when there are ad hoc schedule overrides and around shift changes, etc.
+Oncall bot responds to @oncall app mentions and tags whatever engineer is the
+current primary oncall in a thread. This helps route important/urgent messages
+to the right engineer without people having to refer to PagerDuty or any other
+sources to figure out who's currently oncall. This is especially helpful when
+there are ad hoc schedule overrides and around shift changes, etc.
 
 ### Deployment
 
