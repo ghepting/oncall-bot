@@ -9,7 +9,7 @@ there are ad hoc schedule overrides and around shift changes, etc.
 ### Deployment
 
 ```bash
-slack deploy --team TF4TV0V9V # owner-workspace-hq
+slack deploy --team T0785APSKDG
 ```
 
 ### Environment Variables
@@ -17,7 +17,7 @@ slack deploy --team TF4TV0V9V # owner-workspace-hq
 In local development environment variables can be set in the `.env` file:
 
 ```
-PAGERDUTY_SCHEDULE_ID=PD1202L
+PAGERDUTY_SCHEDULE_ID=PD1234S
 PAGERDUTY_API_KEY=<YOUR_API_KEY_GOES_HERE>
 ```
 
@@ -26,7 +26,7 @@ PAGERDUTY_API_KEY=<YOUR_API_KEY_GOES_HERE>
 List environment variables that are configured in production:
 
 ```bash
-slack env list --team TF4TV0V9V
+slack env list --team T0785APSKDG
 ```
 
 This will return something that looks like:
@@ -42,5 +42,5 @@ This will return something that looks like:
 To update an environment variable, use the Slack CLI command `slack env add`:
 
 ```bash
-slack env add --team TF4TV0V9V PAGERDUTY_API_KEY <YOUR_API_KEY_GOES_HERE>
+slack env add --team T0785APSKDG PAGERDUTY_API_KEY <YOUR_API_KEY_GOES_HERE>
 ```
