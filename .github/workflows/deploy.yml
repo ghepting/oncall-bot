@@ -39,4 +39,5 @@ jobs:
           SLACK_SERVICE_TOKEN: ${{ secrets.SLACK_SERVICE_TOKEN }}
           SLACK_TEAM_ID: ${{ vars.SLACK_TEAM_ID }}
         run: |
-          slack deploy -s --team $SLACK_TEAM_ID --token $SLACK_SERVICE_TOKEN
+          slack deploy -s --team $SLACK_TEAM_ID --token $SLACK_SERVICE_TOKEN && \
+          slack trigger update --trigger-id Ft0799TZMKTN --trigger-def "triggers/app_mentioned.ts"
