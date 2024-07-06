@@ -1,11 +1,12 @@
 {
   "apps": {
-    "TF4TV0V9V": {
-      "app_id": "A079W7QNHFS",
+    "E07BYQGKXB2": {
+      "app_id": "A07B3CUFG86",
+      "enterprise_id": "E07BYQGKXB2",
       "IsDev": false,
-      "team_domain": "owner-workspace-hq",
-      "team_id": "TF4TV0V9V"
+      "team_domain": "ghepting-sandbox",
+      "team_id": "E07BYQGKXB2"
     }
   },
-  "default": "owner-workspace-hq"
+  "default": "ghepting-sandbox"
 }
