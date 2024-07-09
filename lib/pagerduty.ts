@@ -1,13 +1,16 @@
+import { SlackAPI } from "deno-slack-api/mod.ts";
 import {
   PagerDutyOncall,
   PagerDutyUser,
   PagerDutyOncalls,
   PagerDutyUserDetails,
 } from "../types/types.ts";
+import oncallDataCache from "../datastores/oncallDataCache.ts";
 
 export async function getPrimaryPagerDutyOncallUserFromSchedule(
   schedule_id: PagerDutyOncall["schedule"]["id"],
   api_key: string,
+  slack_service_token: string,
 ): Promise<PagerDutyUser> {
   const response = await fetch(
     `https://api.pagerduty.com/oncalls?schedule_ids[]=${schedule_id}`,
